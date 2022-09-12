@@ -72,11 +72,10 @@ p {
 }
 
 .Main_rate {
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  gap: 10px;
-  margin-block: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: unset;
+  align-items: flex-end;
 }
 
 .Main_rate-item {
@@ -88,6 +87,7 @@ p {
   padding: 10px;
   width: 86vw;
   max-width: 350px;
+  margin-block: 20px;
 }
 
 .Main_rate-compani h2 {
@@ -101,6 +101,7 @@ p {
 .Main_reviews {
   display: grid;
   gap: 20px;
+  margin-top: 20px;
 }
 
 .Main_reviews-card {
@@ -188,6 +189,9 @@ small {
 }
 
 @media only screen and (min-width: 1024px) {
+  .Main_text {
+    text-align: start;
+  }
   .bg-patt-2 {
     height: 100%;
   }
@@ -197,14 +201,28 @@ small {
     padding: 60px;
     width: 90%;
   }
+  .Main_rate-item {
+    margin-top: 30px;
+  }
 
-  .Main_text {
-    text-align: start;
+  .Main_rate-item:nth-child(1) {
+    margin-right: 60px;
+  }
+  .Main_rate-item:nth-child(2) {
+    margin-right: 30px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .Main_text_rating {
-    flex-direction: row;
+  .Main_reviews {
+    margin-top: 0px;
+  }
+
+  .Main_reviews-card:nth-child(3) {
+    margin-top: 60px;
+  }
+
+  .Main_reviews-card:nth-child(2) {
+    margin-top: 30px;
   }
 }
